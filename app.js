@@ -9,7 +9,7 @@ app.get('/demo/:id', (req, res) => {
     eval('console.log("something", ' + req.params.id + ')');
     // #2
     eval('console.log("something else", ' + req.params.id + ')');
-    res.send(`Hello Guest`)
+    res.send(`Hello ${req.params.id}`)
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
